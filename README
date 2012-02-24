@@ -1,0 +1,17 @@
+iassert
+==========
+
+iassert is a simple testing library supporting:
+ *  setup and teardown methods
+ *  multiple testsuites
+ *  simple error reporting
+ 
+The basic idea of iassert is to execute teardown methods in case of assertion failure using signal handlers.
+
+This non-hortodox approach (signal handlers should use only async-signal-safe functions) 
+make this library very easy and efficient in pointing to errors.
+
+Moreover, as failures are triggered by a SIGABRT, the program is in every case doomed to die. 
+
+See examples for more info.
+  
